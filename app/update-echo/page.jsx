@@ -1,8 +1,9 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Form from "../../components/Form";
+import Loading from "./loading";
 
 const UpdateEcho = () => {
   const router = useRouter();
@@ -52,7 +53,7 @@ const UpdateEcho = () => {
   };
 
   return (
-    <Suspense>
+    <Suspense fallback={<Loading/>}>
       <Form
         type='Edit'
         post={post}
@@ -60,7 +61,7 @@ const UpdateEcho = () => {
         submitting={submitting}
         handleSubmit={editEcho}
       />
-    </Suspense>
+      </Suspense>
   );
 };
 

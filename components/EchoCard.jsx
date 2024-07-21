@@ -31,7 +31,7 @@ const EchoCard = ({
   return (
     <div className='echo_card'>
       <div className='flex justify-between items-start gap-5'>
-        <div className='flex-1 flex flex-center gap-3 cursor-pointer' onClick={handleProfileClick}
+        <div className='flex flex-1 flex-center gap-3 cursor-pointer' onClick={handleProfileClick}
         >
           <Image 
             src={post.creator.image}

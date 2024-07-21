@@ -22,7 +22,7 @@ const Form = ({
       >
         <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
-            Your AI Echo
+            Resonate your Echo
           </span>
           <textarea 
             className='form_textarea'

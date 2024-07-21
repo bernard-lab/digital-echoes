@@ -61,7 +61,7 @@ const UpdateEcho = () => {
         submitting={submitting}
         handleSubmit={editEcho}
       />
-      </Suspense>
+    </Suspense>
   );
 };
 

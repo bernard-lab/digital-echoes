@@ -1,6 +1,6 @@
 "use client"
 
-import {useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 import {useSearchParams } from 'next/navigation'
 import Profile from '../../../components/Profile';
 
@@ -21,12 +21,13 @@ const UserProfile = ({ params }) => {
         
     }, [params.profileId]); 
 
-  return (
+  return (    
     <Profile 
-          name={`${username}'s`}
-          data={posts} 
-          handleEdit={()=>{}} 
-          handleDelete={undefined}    />
+      name={`${username}'s`}
+      data={posts} 
+      handleEdit={()=>{}} 
+       handleDelete={undefined}    
+    />   
   )
 }
 

@@ -1,9 +1,10 @@
 "use client"
 
-import {useState, useEffect } from 'react'
+import {useState, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Profile from '../../components/Profile'
+import Loading from './loading'
 
 const MyProfile = () => {
     const { data: session } = useSession();
@@ -43,13 +44,14 @@ const MyProfile = () => {
       }
     }
   return (
-    <Profile 
+    <Suspense fallback={Loading}>
+      <Profile 
         name="My "
         data={posts}
         handleEdit={handleEdit}
         handleDelete={handleDelete}
-
-    />
+      />
+    </Suspense>
   )
 }
 

@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import EchoCard from './EchoCard';
 
+export const revalidate = 10;
+
 const EchoCardList = ({ data, handleTagClick }) => {
   return (
     <div className='mt-16 echo_layout'>

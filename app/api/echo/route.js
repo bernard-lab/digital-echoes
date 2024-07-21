@@ -1,6 +1,8 @@
 import { connectToDB } from "../../../utils/database";
 import Echo from "../../../models/echo";
 
+export const revalidate = 10;
+
 export const GET = async (request) => {
   try {
     await connectToDB();

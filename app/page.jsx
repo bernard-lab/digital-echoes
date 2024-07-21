@@ -1,4 +1,6 @@
 import Feed from "../components/Feed"
+import Loading from "./loading"; 
+import { Suspense } from "react";
 
 const Home = () => {
   return (
@@ -12,8 +14,9 @@ const Home = () => {
         Digital Echoes is your space for sharing and exploring thoughts and reflections in the digital age. Discover a vibrant collection of insights and stories that resonate with today's world
         </p>
 
-
-        <Feed />
+        <Suspense fallback={<Loading/>}>
+          <Feed />
+        </Suspense>
     </section>
   )
 }
